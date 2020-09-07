@@ -12,4 +12,18 @@ window.onload = function () {
       const currentMood = store.getState().mood
       document.querySelector("#container").innerText = currentMood
     })
+
+  document.querySelector("#mood3")
+    .addEventListener("click", function () {
+      store.dispatch({ type: "PROUD" })
+      const currentMood = store.getState().mood
+      document.querySelector("#container").innerText = currentMood
+    })
+
+  document.querySelector("#mood4")
+    .addEventListener("click", function () {
+      store.dispatch({ type: "MAGIC" })
+      const currentMood = store.getState().mood
+      document.querySelector("#container").innerText = currentMood
+    })
 }
