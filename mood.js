@@ -1,20 +1,15 @@
-window.onload = function() {
+window.onload = function () {
+  document.querySelector("#mood1")
+    .addEventListener("click", function () {
+      store.dispatch({ type: "BEAR" })
+      const currentMood = store.getState().mood
+      document.querySelector("#container").innerText = currentMood
+    })
 
+  document.querySelector("#mood2")
+    .addEventListener("click", function () {
+      store.dispatch({ type: "FLIP_TABLE" })
+      const currentMood = store.getState().mood
+      document.querySelector("#container").innerText = currentMood
+    })
 }
-
-
-// const counterElement = document.querySelector("h1");
-
-// document.querySelector("#increment")
-//     .addEventListener("click", function () {
-//       store.dispatch({ type: "INCREMENT" });
-//       const currentCount = store.getState().count;
-//       counterElement.innerText = currentCount;
-// });
-
-// document.querySelector("#decrement")
-//     .addEventListener("click", function () {
-//       store.dispatch({ type: "DECREMENT" });
-//       const currentCount = store.getState().count;
-//       counterElement.innerText = currentCount;
-// });
